@@ -1,2 +1,9 @@
-﻿  GUI.cpp
-  Project5_0.vcxproj -> D:\Users\conor\Desktop\Robotic\Project5_0\Debug\Project5_0.exe
+﻿  Vector2.cpp
+d:\users\conor\desktop\robproj_5\roboticsproject5\project5_0\project5_0\vector2.cpp(55): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\users\conor\desktop\robproj_5\roboticsproject5\project5_0\project5_0\vector2.cpp(56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Robot.cpp
+  main.cpp
+  GUI.cpp
+  Block.cpp
+  Generating Code...
+  Project5_0.vcxproj -> D:\Users\conor\Desktop\RobProj_5\RoboticsProject5\Project5_0\Debug\Project5_0.exe

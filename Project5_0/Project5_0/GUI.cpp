@@ -199,8 +199,8 @@ void GUI::initMessage() {
 
 
 void GUI::display() {
+	glClearColor(GUI::getInstance()->ambient_light, GUI::getInstance()->ambient_light, GUI::getInstance()->ambient_light, 0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	glClearColor(GUI::getInstance()->ambient_light, GUI::getInstance()->ambient_light, GUI::getInstance()->ambient_light,0);
 
 	GUI::getInstance()->drawEnvironment();
 	GUI::getInstance()->drawStartPoint();
