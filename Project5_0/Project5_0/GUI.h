@@ -22,7 +22,7 @@ class GUI {
 private:
 	static GUI* s_instance;
 	GUI();
-	GUI(int SCREEN_WIDTH, int SCREEN_HEIGHT, float ambient_light);
+	GUI(int SCREEN_WIDTH, int SCREEN_HEIGHT, float ambient_light, bool _file_input, vector<string> _lines);
 
 
 	// The size of the start/end points (the width of the boxes)
@@ -50,13 +50,14 @@ private:
 	// What color the screen is cleared for (1 = white, 0 = black)
 	float ambient_light = 0.7f;
 
-
+	bool file_input;
+	vector<string> lines;
 
 	const int pathsize = 3;
 	int SCREEN_WIDTH, SCREEN_HEIGHT;
 public:
 	static GUI* getInstance();
-	static GUI* getInstance(int SCREEN_WIDTH, int SCREEN_HEIGHT, float ambient_light);
+	static GUI* getInstance(int SCREEN_WIDTH, int SCREEN_HEIGHT, float ambient_light, bool file_input, vector<string> _lines);
 
 
 	// =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=

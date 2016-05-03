@@ -1,25 +1,2 @@
-﻿  Robot.cpp
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(129): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(158): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(170): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(182): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(215): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(257): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(289): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(324): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(360): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(362): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(422): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(423): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(431): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(432): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(437): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(438): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(443): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(447): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(453): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(457): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(464): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(471): warning C4018: '<': signed/unsigned mismatch
-c:\users\brant carthel\documents\github\roboticsproject5\project5_0\project5_0\robot.cpp(479): warning C4018: '<': signed/unsigned mismatch
+﻿  GUI.cpp
   Project5_0.vcxproj -> C:\Users\Brant Carthel\Documents\GitHub\RoboticsProject5\Project5_0\Debug\Project5_0.exe
