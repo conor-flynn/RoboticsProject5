@@ -118,7 +118,6 @@ void GUI::processClick(int x, int y) {
 						endPoint = new Block(xx, yy, width, height);
 				}
 				
-				cout << "\nSize = " << lines.size() << endl;
 				state = Block1;
 				cout << "Click somewhere to launch the path-finder." << endl;
 				break;

@@ -27,15 +27,11 @@ int main(int argc, char** argv) {
 	vector<string> lines;
 
 	if (choice == 1) {
-		cout << "NOICE!\n";
 		ifstream in("input.txt");
-		ofstream out("output.txt");
-		out << "TESTING!";
 		string input;
 		if (in.is_open()) {
 			cout << "\nOpened file.\n";
 			while (getline(in, input)) {
-				cout << "\nINPUT=" << input;
 				lines.push_back(input);
 			}
 		}
