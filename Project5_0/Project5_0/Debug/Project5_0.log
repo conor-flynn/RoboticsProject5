@@ -4,6 +4,7 @@ d:\users\conor\desktop\robproj_5\roboticsproject5\project5_0\project5_0\vector2.
   Robot.cpp
   main.cpp
   GUI.cpp
+d:\users\conor\desktop\robproj_5\roboticsproject5\project5_0\project5_0\gui.cpp(146): warning C4102: 'defaut': unreferenced label
   Block.cpp
   Generating Code...
   Project5_0.vcxproj -> D:\Users\conor\Desktop\RobProj_5\RoboticsProject5\Project5_0\Debug\Project5_0.exe

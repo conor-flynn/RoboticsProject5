@@ -64,72 +64,62 @@ void GUI::drawPath() {
 }
 
 void GUI::processClick(int x, int y) {
-	// enum SetupState { Nothing, DBlock1, Block1, DBlock2, Block2, DBlock3, Block3, StartPoint, EndPoint };
+
+	float xx, yy, width, height;
+	
 	switch (state) {
 	case Ready:
 
-		// We have nothing yet, so create the first block
-		environment.push_back(new Block(x, y, 0, 0));
-		state = DBlock1;
-		cout << "Move the mouse around to resize, and click when you are finished." << endl << endl;
-
-		break;
-	case DBlock1:
-
-		// We are finished drawing the first block
-		environment[0]->resize(x, y);
+		width = height = block1Size;
+		xx = x - width / 2;
+		yy = y - height / 2;
+		environment.push_back(new Block(xx, yy, width, height));
 		state = Block1;
-		cout << "Click where you want the second Block to start from. Move the mouse around to resize, and click when you are finished." << endl << endl;
-
+		cout << "Click somewhere to place the second block(" << block2Size << "x" << block2Size << ")." << endl;
 		break;
+
 	case Block1:
 
-		// We need to start drawing the next block
-		environment.push_back(new Block(x, y, 0, 0));
-		state = DBlock2;
-
-		break;
-	case DBlock2:
-
-		// We have finished drawing block2
-		environment[1]->resize(x, y);
+		width = height = block2Size;
+		xx = x - width / 2;
+		yy = y - height / 2;
+		environment.push_back(new Block(xx, yy, width, height));
 		state = Block2;
-		cout << "Click where you want the third Block to start from. Move the mouse around to resize, and click when you are finished." << endl << endl;
-
+		cout << "Click somewhere to place the third block(" << block3Size << "x" << block3Size << ")." << endl;
 		break;
+
 	case Block2:
 
-		// We need to start drawing the next block
-		environment.push_back(new Block(x, y, 0, 0));
-		state = DBlock3;
-
-		break;
-	case DBlock3:
-
-		// We have finished drawing block3
-		environment[2]->resize(x, y);
+		width = height = block3Size;
+		xx = x - width / 2;
+		yy = y - height / 2;
+		environment.push_back(new Block(xx, yy, width, height));
 		state = Block3;
-		cout << "Click where you want the starting location to be." << endl << endl;
-
+		cout << "Click somewhere to place the starting point." << endl;
 		break;
+
 	case Block3:
 
-		// We need to save the location and construct the block that represents the start point
-		startPoint = new Block(x - pointsize, y - pointsize, 2 * pointsize, 2 * pointsize);
+		width = height = pointsize;
+		xx = x - width / 2;
+		yy = y - height / 2;
+		startPoint = new Block(xx, yy, width, height);
 		state = StartPoint;
-		cout << "Click where you want the ending location to be." << endl << endl;
-
+		cout << "Click somewhere to place the ending point." << endl;
 		break;
+
 	case StartPoint:
 
-		// We need to save the location and construct the block that represents the end point
-		endPoint = new Block(x - pointsize, y - pointsize, 2 * pointsize, 2 * pointsize);
+		width = height = pointsize;
+		xx = x - width / 2;
+		yy = y - height / 2;
+		endPoint = new Block(xx, yy, width, height);
 		state = EndPoint;
-		cout << "Click when you want to find the path between the start and end locations." << endl << endl;
-
+		cout << "Click somewhere to launch the path-finder." << endl;
 		break;
+
 	case EndPoint:
-	{
+		{
 		// Ask for the path from the robot
 		Robot* robot = new Robot(SCREEN_WIDTH, SCREEN_HEIGHT, environment, startPoint, endPoint);
 		vector<Vector2> path = robot->findPath();
@@ -139,8 +129,9 @@ void GUI::processClick(int x, int y) {
 		state = Restart;
 		cout << "Click again to clear and restart." << endl << endl;
 
-	}break;
+		}break;
 	case Restart:
+
 		cout << "Attempting to restart..." << endl << endl;
 
 		environment.clear();
@@ -150,51 +141,15 @@ void GUI::processClick(int x, int y) {
 
 		state = Ready;
 		initMessage();
+		break;
 
-		break;
-	default:
-		break;
-	}
-}
-
-void GUI::processMotion(int x, int y) {
-	switch (state) {
-	case Ready:
-		break;
-	case DBlock1:
-
-		// Update the width and height of block 1
-		environment[0]->resize(x, y);
-
-		break;
-	case Block1:
-		break;
-	case DBlock2:
-
-		// Update the width and height of block 2
-		environment[1]->resize(x, y);
-
-		break;
-	case Block2:
-		break;
-	case DBlock3:
-
-		// Update the width and height of block 3
-		environment[2]->resize(x, y);
-		break;
-	case Block3:
-		break;
-	case StartPoint:
-		break;
-	case EndPoint:
-		break;
-	default:
+	defaut:
 		break;
 	}
 }
 
 void GUI::initMessage() {
-	cout << "Click somewhere to determine the starting location of the first Block" << endl << endl;
+	cout << "Click somewhere to place the first block(" << block1Size << "x" << block1Size << ")." << endl;
 }
 
 
@@ -212,9 +167,5 @@ void GUI::display() {
 
 void GUI::mouseAction(int button, int state, int x, int y) {
 	if (state == GLUT_DOWN)	GUI::getInstance()->processClick(x, y);
-	glutPostRedisplay();
-}
-void GUI::mouseMovement(int x, int y) {
-	GUI::getInstance()->processMotion(x, y);
 	glutPostRedisplay();
 }

@@ -36,7 +36,6 @@ int main(int argc, char** argv) {
 
 	glutDisplayFunc(GUI::display);
 	glutMouseFunc(GUI::mouseAction);
-	glutPassiveMotionFunc(GUI::mouseMovement);
 	glutMainLoop();	
 
 	return 0;
